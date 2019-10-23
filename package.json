@@ -1,0 +1,26 @@
+{
+  "name": "ultradox-api-client-java",
+  "version": "1.0.0",
+  "description": "Ultradox API Client for Java",
+  "author": "Floreysoft",
+  "private": true,
+  "scripts": {
+    "clean": "yarn && mvn clean -Drevision=1 && del-cli -f dist",
+    "copy": "copyfiles -f target/*.jar ./dist",
+    "test": "yarn && cross-var \"mvn test -Drevision=$npm_package_version\"",
+    "build": "yarn && cross-var \"mvn install -Drevision=$npm_package_version\"",
+    "predeploy": "yarn --cwd ../maven-repo/ pull",
+    "postdeploy": "yarn --cwd ../maven-repo/ push",
+    "deploy": "yarn && cross-var \"mvn deploy -Drevision=$npm_package_version\" && yarn run copy",
+    "release": "yarn && yarn version",
+    "prerelease": "git add . && cross-var \"git commit -m 'releasing v$npm_package_version'\" && git push",
+    "postrelease": "git push && git push --tags && yarn run deploy && yarn run patch",
+    "patch": "yarn version --patch --no-git-tag-version --no-commit-hooks",
+    "postpatch": "cross-var \"yarn version --new-version $npm_package_version-SNAPSHOT --no-git-tag-version --no-commit-hooks \""
+  },
+  "devDependencies": {
+    "copyfiles": "^2.1.0",
+    "cross-var": "^1.1.0",
+    "del-cli": "^1.1.0"
+  }
+}
