@@ -19,11 +19,11 @@ Convert the template document into a new document, given a Model
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import com.floreysoft.ultradox.api.ApiClient;
+//import com.floreysoft.ultradox.api.ApiException;
+//import com.floreysoft.ultradox.api.Configuration;
+//import com.floreysoft.ultradox.api.auth.*;
+//import com.floreysoft.ultradox.api.api.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -84,11 +84,11 @@ Convert the template document into a new document, given a Model
 ### Example
 ```java
 // Import classes:
-//import io.swagger.client.ApiClient;
-//import io.swagger.client.ApiException;
-//import io.swagger.client.Configuration;
-//import io.swagger.client.auth.*;
-//import io.swagger.client.api.DefaultApi;
+//import com.floreysoft.ultradox.api.ApiClient;
+//import com.floreysoft.ultradox.api.ApiException;
+//import com.floreysoft.ultradox.api.Configuration;
+//import com.floreysoft.ultradox.api.auth.*;
+//import com.floreysoft.ultradox.api.api.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

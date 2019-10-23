@@ -19,13 +19,4 @@ hs_err_pid*
 target
 .gradle
 build
-/build.gradle
-/build.sbt
-/git_push.sh
-/gradle.properties
-/gradle/wrapper/gradle-wrapper.jar
-/gradle/wrapper/gradle-wrapper.properties
-/gradlew
-/gradlew.bat
-/settings.gradle
-/src/main/AndroidManifest.xml
+/node_modules
