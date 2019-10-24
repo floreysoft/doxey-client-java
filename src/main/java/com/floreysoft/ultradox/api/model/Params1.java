@@ -25,10 +25,10 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Params
+ * Params1
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-24T14:26:10.962Z")
-public class Params {
+public class Params1 {
   @SerializedName("templatecontent")
   private String templatecontent = null;
 
@@ -97,10 +97,10 @@ public class Params {
   @SerializedName("format")
   private FormatEnum format = null;
 
-  @SerializedName("model")
-  private Object model = null;
+  @SerializedName("models")
+  private Object models = null;
 
-  public Params templatecontent(String templatecontent) {
+  public Params1 templatecontent(String templatecontent) {
     this.templatecontent = templatecontent;
     return this;
   }
@@ -118,7 +118,7 @@ public class Params {
     this.templatecontent = templatecontent;
   }
 
-  public Params locale(String locale) {
+  public Params1 locale(String locale) {
     this.locale = locale;
     return this;
   }
@@ -136,7 +136,7 @@ public class Params {
     this.locale = locale;
   }
 
-  public Params currency(String currency) {
+  public Params1 currency(String currency) {
     this.currency = currency;
     return this;
   }
@@ -154,7 +154,7 @@ public class Params {
     this.currency = currency;
   }
 
-  public Params timezone(String timezone) {
+  public Params1 timezone(String timezone) {
     this.timezone = timezone;
     return this;
   }
@@ -172,7 +172,7 @@ public class Params {
     this.timezone = timezone;
   }
 
-  public Params format(FormatEnum format) {
+  public Params1 format(FormatEnum format) {
     this.format = format;
     return this;
   }
@@ -190,22 +190,22 @@ public class Params {
     this.format = format;
   }
 
-  public Params model(Object model) {
-    this.model = model;
+  public Params1 models(Object models) {
+    this.models = models;
     return this;
   }
 
    /**
    * Model data
-   * @return model
+   * @return models
   **/
   @ApiModelProperty(required = true, value = "Model data")
-  public Object getModel() {
-    return model;
+  public Object getModels() {
+    return models;
   }
 
-  public void setModel(Object model) {
-    this.model = model;
+  public void setModels(Object models) {
+    this.models = models;
   }
 
 
@@ -217,32 +217,32 @@ public class Params {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Params params = (Params) o;
-    return Objects.equals(this.templatecontent, params.templatecontent) &&
-        Objects.equals(this.locale, params.locale) &&
-        Objects.equals(this.currency, params.currency) &&
-        Objects.equals(this.timezone, params.timezone) &&
-        Objects.equals(this.format, params.format) &&
-        Objects.equals(this.model, params.model);
+    Params1 params1 = (Params1) o;
+    return Objects.equals(this.templatecontent, params1.templatecontent) &&
+        Objects.equals(this.locale, params1.locale) &&
+        Objects.equals(this.currency, params1.currency) &&
+        Objects.equals(this.timezone, params1.timezone) &&
+        Objects.equals(this.format, params1.format) &&
+        Objects.equals(this.models, params1.models);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(templatecontent, locale, currency, timezone, format, model);
+    return Objects.hash(templatecontent, locale, currency, timezone, format, models);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Params {\n");
+    sb.append("class Params1 {\n");
     
     sb.append("    templatecontent: ").append(toIndentedString(templatecontent)).append("\n");
     sb.append("    locale: ").append(toIndentedString(locale)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    timezone: ").append(toIndentedString(timezone)).append("\n");
     sb.append("    format: ").append(toIndentedString(format)).append("\n");
-    sb.append("    model: ").append(toIndentedString(model)).append("\n");
+    sb.append("    models: ").append(toIndentedString(models)).append("\n");
     sb.append("}");
     return sb.toString();
   }
