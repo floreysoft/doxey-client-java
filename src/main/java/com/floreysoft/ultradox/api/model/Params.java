@@ -15,36 +15,32 @@ package com.floreysoft.ultradox.api.model;
 
 import java.util.Objects;
 import java.util.Arrays;
-import com.google.gson.TypeAdapter;
-import com.google.gson.annotations.JsonAdapter;
-import com.google.gson.annotations.SerializedName;
-import com.google.gson.stream.JsonReader;
-import com.google.gson.stream.JsonWriter;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import java.io.IOException;
 
 /**
  * Params
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-24T14:26:10.962Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-29T06:11:22.311Z")
 public class Params {
-  @SerializedName("templatecontent")
+  @JsonProperty("templatecontent")
   private String templatecontent = null;
 
-  @SerializedName("locale")
+  @JsonProperty("locale")
   private String locale = null;
 
-  @SerializedName("currency")
+  @JsonProperty("currency")
   private String currency = null;
 
-  @SerializedName("timezone")
+  @JsonProperty("timezone")
   private String timezone = null;
 
   /**
    * Target format
    */
-  @JsonAdapter(FormatEnum.Adapter.class)
   public enum FormatEnum {
     PDF("pdf"),
     
@@ -62,6 +58,7 @@ public class Params {
       this.value = value;
     }
 
+    @JsonValue
     public String getValue() {
       return value;
     }
@@ -71,6 +68,7 @@ public class Params {
       return String.valueOf(value);
     }
 
+    @JsonCreator
     public static FormatEnum fromValue(String text) {
       for (FormatEnum b : FormatEnum.values()) {
         if (String.valueOf(b.value).equals(text)) {
@@ -79,25 +77,12 @@ public class Params {
       }
       return null;
     }
-
-    public static class Adapter extends TypeAdapter<FormatEnum> {
-      @Override
-      public void write(final JsonWriter jsonWriter, final FormatEnum enumeration) throws IOException {
-        jsonWriter.value(enumeration.getValue());
-      }
-
-      @Override
-      public FormatEnum read(final JsonReader jsonReader) throws IOException {
-        String value = jsonReader.nextString();
-        return FormatEnum.fromValue(String.valueOf(value));
-      }
-    }
   }
 
-  @SerializedName("format")
+  @JsonProperty("format")
   private FormatEnum format = null;
 
-  @SerializedName("model")
+  @JsonProperty("model")
   private Object model = null;
 
   public Params templatecontent(String templatecontent) {
