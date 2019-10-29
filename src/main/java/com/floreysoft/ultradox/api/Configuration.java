@@ -13,7 +13,7 @@
 
 package com.floreysoft.ultradox.api;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-29T06:11:22.311Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-29T10:48:46.658Z")
 public class Configuration {
     private static ApiClient defaultApiClient = new ApiClient();
 

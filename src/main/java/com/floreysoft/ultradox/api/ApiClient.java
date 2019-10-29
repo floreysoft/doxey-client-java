@@ -50,7 +50,7 @@ import com.floreysoft.ultradox.api.auth.HttpBasicAuth;
 import com.floreysoft.ultradox.api.auth.ApiKeyAuth;
 import com.floreysoft.ultradox.api.auth.OAuth;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-29T06:11:22.311Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-29T10:48:46.658Z")
 public class ApiClient {
   protected Map<String, String> defaultHeaderMap = new HashMap<String, String>();
   protected String basePath = "https://ultradox-api.appspot.com";

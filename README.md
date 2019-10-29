@@ -2,7 +2,7 @@
 
 Ultradox API
 - API version: 1.0.0
-  - Build date: 2019-10-29T06:11:22.311Z
+  - Build date: 2019-10-29T10:48:46.658Z
 
 Generate personalized documents using ultradox template language
 

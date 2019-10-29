@@ -18,7 +18,7 @@ import com.floreysoft.ultradox.api.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-29T06:11:22.311Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-29T10:48:46.658Z")
 public class OAuth implements Authentication {
   private String accessToken;
 

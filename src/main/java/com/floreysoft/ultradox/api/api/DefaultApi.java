@@ -13,7 +13,7 @@ import com.floreysoft.ultradox.api.model.Params;
 import com.floreysoft.ultradox.api.model.Params1;
 
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-29T06:11:22.311Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-10-29T10:48:46.658Z")
 public class DefaultApi {
   private ApiClient apiClient;
 
