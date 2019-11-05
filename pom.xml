@@ -2,10 +2,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.floreysoft</groupId>
-    <artifactId>ultradox-api-client-java</artifactId>
+    <artifactId>doxey-client-java</artifactId>
     <packaging>jar</packaging>
-    <name>ultradox-api-client-java</name>
-    <version>1.0.6</version>
+    <name>doxey-client-java</name>
+    <version>1.0.7</version>
     <url>https://github.com/swagger-api/swagger-codegen</url>
     <description>Swagger Java</description>
     <scm>

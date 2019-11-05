@@ -1,6 +1,6 @@
 # DefaultApi
 
-All URIs are relative to *https://ultradox-api.appspot.com*
+All URIs are relative to *https://api.doxey.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,11 +20,11 @@ Convert the template document into a new document, given a Model
 ### Example
 ```java
 // Import classes:
-//import com.floreysoft.ultradox.api.ApiClient;
-//import com.floreysoft.ultradox.api.ApiException;
-//import com.floreysoft.ultradox.api.Configuration;
-//import com.floreysoft.ultradox.api.auth.*;
-//import com.floreysoft.ultradox.api.api.DefaultApi;
+//import com.floreysoft.doxey.invoke.ApiClient;
+//import com.floreysoft.doxey.invoke.ApiException;
+//import com.floreysoft.doxey.invoke.Configuration;
+//import com.floreysoft.doxey.invoke.auth.*;
+//import com.floreysoft.doxey.api.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -85,11 +85,11 @@ Convert the template document into a new document, given a Model
 ### Example
 ```java
 // Import classes:
-//import com.floreysoft.ultradox.api.ApiClient;
-//import com.floreysoft.ultradox.api.ApiException;
-//import com.floreysoft.ultradox.api.Configuration;
-//import com.floreysoft.ultradox.api.auth.*;
-//import com.floreysoft.ultradox.api.api.DefaultApi;
+//import com.floreysoft.doxey.invoke.ApiClient;
+//import com.floreysoft.doxey.invoke.ApiException;
+//import com.floreysoft.doxey.invoke.Configuration;
+//import com.floreysoft.doxey.invoke.auth.*;
+//import com.floreysoft.doxey.api.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -140,11 +140,11 @@ Convert the template document into a multi documents based on the given number o
 ### Example
 ```java
 // Import classes:
-//import com.floreysoft.ultradox.api.ApiClient;
-//import com.floreysoft.ultradox.api.ApiException;
-//import com.floreysoft.ultradox.api.Configuration;
-//import com.floreysoft.ultradox.api.auth.*;
-//import com.floreysoft.ultradox.api.api.DefaultApi;
+//import com.floreysoft.doxey.invoke.ApiClient;
+//import com.floreysoft.doxey.invoke.ApiException;
+//import com.floreysoft.doxey.invoke.Configuration;
+//import com.floreysoft.doxey.invoke.auth.*;
+//import com.floreysoft.doxey.api.DefaultApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
