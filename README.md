@@ -1,10 +1,10 @@
-# ultradox-api-client-java
+# doxey-client-java
 
-Ultradox API
+Doxey API
 - API version: 1.0.0
-  - Build date: 2019-10-29T10:48:46.658Z
+  - Build date: 2019-11-05T14:54:28.765Z
 
-Generate personalized documents using ultradox template language
+Generate personalized documents using doxey template language
 
   For more information, please visit [https://doxey.io](https://doxey.io)
 
@@ -40,7 +40,7 @@ Add this dependency to your project's POM:
 ```xml
 <dependency>
   <groupId>com.floreysoft</groupId>
-  <artifactId>ultradox-api-client-java</artifactId>
+  <artifactId>doxey-client-java</artifactId>
   <version>1.0.0</version>
   <scope>compile</scope>
 </dependency>
@@ -51,7 +51,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.floreysoft:ultradox-api-client-java:1.0.0"
+compile "com.floreysoft:doxey-client-java:1.0.0"
 ```
 
 ### Others
@@ -64,7 +64,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/ultradox-api-client-java-1.0.0.jar`
+* `target/doxey-client-java-1.0.0.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -73,10 +73,10 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import com.floreysoft.ultradox.api.*;
-import com.floreysoft.ultradox.api.auth.*;
-import com.floreysoft.ultradox.api.model.*;
-import com.floreysoft.ultradox.api.api.DefaultApi;
+import com.floreysoft.doxey.invoke.*;
+import com.floreysoft.doxey.invoke.auth.*;
+import com.floreysoft.doxey.model.*;
+import com.floreysoft.doxey.api.DefaultApi;
 
 import java.io.File;
 import java.util.*;
@@ -113,7 +113,7 @@ public class DefaultApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://ultradox-api.appspot.com*
+All URIs are relative to *https://api.doxey.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

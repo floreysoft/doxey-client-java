@@ -13,7 +13,7 @@ import com.floreysoft.doxey.model.Params;
 import com.floreysoft.doxey.model.Params1;
 
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-11-05T14:52:29.982Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-11-05T14:54:28.765Z")
 public class DefaultApi {
   private ApiClient apiClient;
 

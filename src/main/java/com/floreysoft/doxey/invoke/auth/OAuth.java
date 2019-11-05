@@ -18,7 +18,7 @@ import com.floreysoft.doxey.invoke.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-11-05T14:52:29.982Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-11-05T14:54:28.765Z")
 public class OAuth implements Authentication {
   private String accessToken;
 
