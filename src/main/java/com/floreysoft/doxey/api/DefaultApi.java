@@ -13,7 +13,7 @@ import com.floreysoft.doxey.model.Params;
 import com.floreysoft.doxey.model.Params1;
 
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-11-05T14:54:28.765Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-11-14T10:53:54.676Z")
 public class DefaultApi {
   private ApiClient apiClient;
 
@@ -36,6 +36,7 @@ public class DefaultApi {
   /**
    * 
    * Convert the template document into a new document, given a Model
+   * @param apiKey API key (required)
    * @param fileId Id of the file to convert (required)
    * @param locale The locale (&#39;de&#39;, &#39;en&#39; ...) (required)
    * @param currency The currency (&#39;USD&#39;, &#39;EUR&#39; ...) (required)
@@ -45,13 +46,14 @@ public class DefaultApi {
    * @return File
    * @throws ApiException if fails to make API call
    */
-  public File converter(String fileId, String locale, String currency, String timezone, String format, Object model) throws ApiException {
-    return converterWithHttpInfo(fileId, locale, currency, timezone, format, model).getData();
+  public File converter(String apiKey, String fileId, String locale, String currency, String timezone, String format, Object model) throws ApiException {
+    return converterWithHttpInfo(apiKey, fileId, locale, currency, timezone, format, model).getData();
       }
 
   /**
    * 
    * Convert the template document into a new document, given a Model
+   * @param apiKey API key (required)
    * @param fileId Id of the file to convert (required)
    * @param locale The locale (&#39;de&#39;, &#39;en&#39; ...) (required)
    * @param currency The currency (&#39;USD&#39;, &#39;EUR&#39; ...) (required)
@@ -61,8 +63,13 @@ public class DefaultApi {
    * @return ApiResponse&lt;File&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<File> converterWithHttpInfo(String fileId, String locale, String currency, String timezone, String format, Object model) throws ApiException {
+  public ApiResponse<File> converterWithHttpInfo(String apiKey, String fileId, String locale, String currency, String timezone, String format, Object model) throws ApiException {
     Object localVarPostBody = model;
+    
+    // verify the required parameter 'apiKey' is set
+    if (apiKey == null) {
+      throw new ApiException(400, "Missing the required parameter 'apiKey' when calling converter");
+    }
     
     // verify the required parameter 'fileId' is set
     if (fileId == null) {
@@ -102,6 +109,7 @@ public class DefaultApi {
     java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "apiKey", apiKey));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "fileId", fileId));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "locale", locale));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "currency", currency));
@@ -120,7 +128,7 @@ public class DefaultApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "api_key" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<File> localVarReturnType = new GenericType<File>() {};
     return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -172,7 +180,7 @@ public class DefaultApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "api_key" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<File> localVarReturnType = new GenericType<File>() {};
     return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -224,7 +232,7 @@ public class DefaultApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "api_key" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<File> localVarReturnType = new GenericType<File>() {};
     return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);

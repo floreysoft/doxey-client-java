@@ -40,13 +40,14 @@ public class DefaultApiTest {
      */
     @Test
     public void converterTest() throws ApiException {
+        String apiKey = null;
         String fileId = null;
         String locale = null;
         String currency = null;
         String timezone = null;
         String format = null;
         Object model = null;
-        File response = api.converter(fileId, locale, currency, timezone, format, model);
+        File response = api.converter(apiKey, fileId, locale, currency, timezone, format, model);
 
         // TODO: test validations
     }

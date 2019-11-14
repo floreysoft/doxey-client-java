@@ -24,8 +24,11 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Params
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-11-05T14:54:28.765Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-11-14T10:53:54.676Z")
 public class Params {
+  @JsonProperty("apiKey")
+  private String apiKey = null;
+
   @JsonProperty("templatecontent")
   private String templatecontent = null;
 
@@ -84,6 +87,24 @@ public class Params {
 
   @JsonProperty("model")
   private Object model = null;
+
+  public Params apiKey(String apiKey) {
+    this.apiKey = apiKey;
+    return this;
+  }
+
+   /**
+   * API key
+   * @return apiKey
+  **/
+  @ApiModelProperty(required = true, value = "API key")
+  public String getApiKey() {
+    return apiKey;
+  }
+
+  public void setApiKey(String apiKey) {
+    this.apiKey = apiKey;
+  }
 
   public Params templatecontent(String templatecontent) {
     this.templatecontent = templatecontent;
@@ -203,7 +224,8 @@ public class Params {
       return false;
     }
     Params params = (Params) o;
-    return Objects.equals(this.templatecontent, params.templatecontent) &&
+    return Objects.equals(this.apiKey, params.apiKey) &&
+        Objects.equals(this.templatecontent, params.templatecontent) &&
         Objects.equals(this.locale, params.locale) &&
         Objects.equals(this.currency, params.currency) &&
         Objects.equals(this.timezone, params.timezone) &&
@@ -213,7 +235,7 @@ public class Params {
 
   @Override
   public int hashCode() {
-    return Objects.hash(templatecontent, locale, currency, timezone, format, model);
+    return Objects.hash(apiKey, templatecontent, locale, currency, timezone, format, model);
   }
 
 
@@ -222,6 +244,7 @@ public class Params {
     StringBuilder sb = new StringBuilder();
     sb.append("class Params {\n");
     
+    sb.append("    apiKey: ").append(toIndentedString(apiKey)).append("\n");
     sb.append("    templatecontent: ").append(toIndentedString(templatecontent)).append("\n");
     sb.append("    locale: ").append(toIndentedString(locale)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");

@@ -50,7 +50,7 @@ import com.floreysoft.doxey.invoke.auth.HttpBasicAuth;
 import com.floreysoft.doxey.invoke.auth.ApiKeyAuth;
 import com.floreysoft.doxey.invoke.auth.OAuth;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-11-05T14:54:28.765Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-11-14T10:53:54.676Z")
 public class ApiClient {
   protected Map<String, String> defaultHeaderMap = new HashMap<String, String>();
   protected String basePath = "https://api.doxey.io";

@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="converter"></a>
 # **converter**
-> File converter(fileId, locale, currency, timezone, format, model)
+> File converter(apiKey, fileId, locale, currency, timezone, format, model)
 
 
 
@@ -20,21 +20,12 @@ Convert the template document into a new document, given a Model
 ### Example
 ```java
 // Import classes:
-//import com.floreysoft.doxey.invoke.ApiClient;
 //import com.floreysoft.doxey.invoke.ApiException;
-//import com.floreysoft.doxey.invoke.Configuration;
-//import com.floreysoft.doxey.invoke.auth.*;
 //import com.floreysoft.doxey.api.DefaultApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure API key authorization: api_key
-ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
-api_key.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api_key.setApiKeyPrefix("Token");
 
 DefaultApi apiInstance = new DefaultApi();
+String apiKey = "apiKey_example"; // String | API key
 String fileId = "fileId_example"; // String | Id of the file to convert
 String locale = "locale_example"; // String | The locale ('de', 'en' ...)
 String currency = "currency_example"; // String | The currency ('USD', 'EUR' ...)
@@ -42,7 +33,7 @@ String timezone = "timezone_example"; // String | The timezone ('Europe/Berlin',
 String format = "format_example"; // String | Target format
 Object model = null; // Object | Variable model
 try {
-    File result = apiInstance.converter(fileId, locale, currency, timezone, format, model);
+    File result = apiInstance.converter(apiKey, fileId, locale, currency, timezone, format, model);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DefaultApi#converter");
@@ -54,6 +45,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **apiKey** | **String**| API key |
  **fileId** | **String**| Id of the file to convert |
  **locale** | **String**| The locale (&#39;de&#39;, &#39;en&#39; ...) |
  **currency** | **String**| The currency (&#39;USD&#39;, &#39;EUR&#39; ...) |
@@ -67,7 +59,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api_key](../README.md#api_key)
+No authorization required
 
 ### HTTP request headers
 
@@ -85,19 +77,9 @@ Convert the template document into a new document, given a Model
 ### Example
 ```java
 // Import classes:
-//import com.floreysoft.doxey.invoke.ApiClient;
 //import com.floreysoft.doxey.invoke.ApiException;
-//import com.floreysoft.doxey.invoke.Configuration;
-//import com.floreysoft.doxey.invoke.auth.*;
 //import com.floreysoft.doxey.api.DefaultApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure API key authorization: api_key
-ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
-api_key.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api_key.setApiKeyPrefix("Token");
 
 DefaultApi apiInstance = new DefaultApi();
 Params params = new Params(); // Params | The conversion parameters
@@ -122,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api_key](../README.md#api_key)
+No authorization required
 
 ### HTTP request headers
 
@@ -140,19 +122,9 @@ Convert the template document into a multi documents based on the given number o
 ### Example
 ```java
 // Import classes:
-//import com.floreysoft.doxey.invoke.ApiClient;
 //import com.floreysoft.doxey.invoke.ApiException;
-//import com.floreysoft.doxey.invoke.Configuration;
-//import com.floreysoft.doxey.invoke.auth.*;
 //import com.floreysoft.doxey.api.DefaultApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure API key authorization: api_key
-ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
-api_key.setApiKey("YOUR API KEY");
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api_key.setApiKeyPrefix("Token");
 
 DefaultApi apiInstance = new DefaultApi();
 Params1 params = new Params1(); // Params1 | The conversion parameters
@@ -177,7 +149,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[api_key](../README.md#api_key)
+No authorization required
 
 ### HTTP request headers
 

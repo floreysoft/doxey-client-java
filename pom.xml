@@ -5,7 +5,7 @@
     <artifactId>doxey-client-java</artifactId>
     <packaging>jar</packaging>
     <name>doxey-client-java</name>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
     <url>https://github.com/swagger-api/swagger-codegen</url>
     <description>Swagger Java</description>
     <scm>

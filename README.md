@@ -2,7 +2,7 @@
 
 Doxey API
 - API version: 1.0.0
-  - Build date: 2019-11-05T14:54:28.765Z
+  - Build date: 2019-11-14T10:53:54.676Z
 
 Generate personalized documents using doxey template language
 
@@ -84,15 +84,9 @@ import java.util.*;
 public class DefaultApiExample {
 
     public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
         
-        // Configure API key authorization: api_key
-        ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
-        api_key.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //api_key.setApiKeyPrefix("Token");
-
         DefaultApi apiInstance = new DefaultApi();
+        String apiKey = "apiKey_example"; // String | API key
         String fileId = "fileId_example"; // String | Id of the file to convert
         String locale = "locale_example"; // String | The locale ('de', 'en' ...)
         String currency = "currency_example"; // String | The currency ('USD', 'EUR' ...)
@@ -100,7 +94,7 @@ public class DefaultApiExample {
         String format = "format_example"; // String | Target format
         Object model = null; // Object | Variable model
         try {
-            File result = apiInstance.converter(fileId, locale, currency, timezone, format, model);
+            File result = apiInstance.converter(apiKey, fileId, locale, currency, timezone, format, model);
             System.out.println(result);
         } catch (ApiException e) {
             System.err.println("Exception when calling DefaultApi#converter");
