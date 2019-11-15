@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="converter"></a>
 # **converter**
-> File converter(apiKey, fileId, locale, currency, timezone, format, model)
+> File converter(apiKey, url, locale, currency, timezone, format, model)
 
 
 
@@ -26,14 +26,14 @@ Convert the template document into a new document, given a Model
 
 DefaultApi apiInstance = new DefaultApi();
 String apiKey = "apiKey_example"; // String | API key
-String fileId = "fileId_example"; // String | Id of the file to convert
+String url = "url_example"; // String | URL of the source file
 String locale = "locale_example"; // String | The locale ('de', 'en' ...)
 String currency = "currency_example"; // String | The currency ('USD', 'EUR' ...)
 String timezone = "timezone_example"; // String | The timezone ('Europe/Berlin', 'GMT+06:00' ...)
 String format = "format_example"; // String | Target format
 Object model = null; // Object | Variable model
 try {
-    File result = apiInstance.converter(apiKey, fileId, locale, currency, timezone, format, model);
+    File result = apiInstance.converter(apiKey, url, locale, currency, timezone, format, model);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling DefaultApi#converter");
@@ -46,7 +46,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **apiKey** | **String**| API key |
- **fileId** | **String**| Id of the file to convert |
+ **url** | **String**| URL of the source file |
  **locale** | **String**| The locale (&#39;de&#39;, &#39;en&#39; ...) |
  **currency** | **String**| The currency (&#39;USD&#39;, &#39;EUR&#39; ...) |
  **timezone** | **String**| The timezone (&#39;Europe/Berlin&#39;, &#39;GMT+06:00&#39; ...) |
