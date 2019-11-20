@@ -10,10 +10,9 @@ import javax.ws.rs.core.GenericType;
 
 import java.io.File;
 import com.floreysoft.doxey.model.Params;
-import com.floreysoft.doxey.model.Params1;
 
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-11-15T11:25:33.577Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-11-20T10:31:03.688Z")
 public class DefaultApi {
   private ApiClient apiClient;
 
@@ -46,8 +45,8 @@ public class DefaultApi {
    * @return File
    * @throws ApiException if fails to make API call
    */
-  public File converter(String apiKey, String url, String locale, String currency, String timezone, String format, Object model) throws ApiException {
-    return converterWithHttpInfo(apiKey, url, locale, currency, timezone, format, model).getData();
+  public File convertGet(String apiKey, String url, String locale, String currency, String timezone, String format, Object model) throws ApiException {
+    return convertGetWithHttpInfo(apiKey, url, locale, currency, timezone, format, model).getData();
       }
 
   /**
@@ -63,46 +62,46 @@ public class DefaultApi {
    * @return ApiResponse&lt;File&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<File> converterWithHttpInfo(String apiKey, String url, String locale, String currency, String timezone, String format, Object model) throws ApiException {
-    Object localVarPostBody = model;
+  public ApiResponse<File> convertGetWithHttpInfo(String apiKey, String url, String locale, String currency, String timezone, String format, Object model) throws ApiException {
+    Object localVarPostBody = null;
     
     // verify the required parameter 'apiKey' is set
     if (apiKey == null) {
-      throw new ApiException(400, "Missing the required parameter 'apiKey' when calling converter");
+      throw new ApiException(400, "Missing the required parameter 'apiKey' when calling convertGet");
     }
     
     // verify the required parameter 'url' is set
     if (url == null) {
-      throw new ApiException(400, "Missing the required parameter 'url' when calling converter");
+      throw new ApiException(400, "Missing the required parameter 'url' when calling convertGet");
     }
     
     // verify the required parameter 'locale' is set
     if (locale == null) {
-      throw new ApiException(400, "Missing the required parameter 'locale' when calling converter");
+      throw new ApiException(400, "Missing the required parameter 'locale' when calling convertGet");
     }
     
     // verify the required parameter 'currency' is set
     if (currency == null) {
-      throw new ApiException(400, "Missing the required parameter 'currency' when calling converter");
+      throw new ApiException(400, "Missing the required parameter 'currency' when calling convertGet");
     }
     
     // verify the required parameter 'timezone' is set
     if (timezone == null) {
-      throw new ApiException(400, "Missing the required parameter 'timezone' when calling converter");
+      throw new ApiException(400, "Missing the required parameter 'timezone' when calling convertGet");
     }
     
     // verify the required parameter 'format' is set
     if (format == null) {
-      throw new ApiException(400, "Missing the required parameter 'format' when calling converter");
+      throw new ApiException(400, "Missing the required parameter 'format' when calling convertGet");
     }
     
     // verify the required parameter 'model' is set
     if (model == null) {
-      throw new ApiException(400, "Missing the required parameter 'model' when calling converter");
+      throw new ApiException(400, "Missing the required parameter 'model' when calling convertGet");
     }
     
     // create path and map variables
-    String localVarPath = "/converter";
+    String localVarPath = "/v1/convert";
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -115,6 +114,7 @@ public class DefaultApi {
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "currency", currency));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "timezone", timezone));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "format", format));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "model", model));
 
     
     
@@ -131,7 +131,7 @@ public class DefaultApi {
     String[] localVarAuthNames = new String[] {  };
 
     GenericType<File> localVarReturnType = new GenericType<File>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /**
    * 
@@ -140,8 +140,8 @@ public class DefaultApi {
    * @return File
    * @throws ApiException if fails to make API call
    */
-  public File directConverter(Params params) throws ApiException {
-    return directConverterWithHttpInfo(params).getData();
+  public File convertPost(Params params) throws ApiException {
+    return convertPostWithHttpInfo(params).getData();
       }
 
   /**
@@ -151,16 +151,16 @@ public class DefaultApi {
    * @return ApiResponse&lt;File&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<File> directConverterWithHttpInfo(Params params) throws ApiException {
+  public ApiResponse<File> convertPostWithHttpInfo(Params params) throws ApiException {
     Object localVarPostBody = params;
     
     // verify the required parameter 'params' is set
     if (params == null) {
-      throw new ApiException(400, "Missing the required parameter 'params' when calling directConverter");
+      throw new ApiException(400, "Missing the required parameter 'params' when calling convertPost");
     }
     
     // create path and map variables
-    String localVarPath = "/directConverter";
+    String localVarPath = "/v1/convert";
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -171,59 +171,7 @@ public class DefaultApi {
     
     
     final String[] localVarAccepts = {
-      "application/octetstream", "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] {  };
-
-    GenericType<File> localVarReturnType = new GenericType<File>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-  /**
-   * 
-   * Convert the template document into a multi documents based on the given number of models
-   * @param params The conversion parameters (required)
-   * @return File
-   * @throws ApiException if fails to make API call
-   */
-  public File zipConverter(Params1 params) throws ApiException {
-    return zipConverterWithHttpInfo(params).getData();
-      }
-
-  /**
-   * 
-   * Convert the template document into a multi documents based on the given number of models
-   * @param params The conversion parameters (required)
-   * @return ApiResponse&lt;File&gt;
-   * @throws ApiException if fails to make API call
-   */
-  public ApiResponse<File> zipConverterWithHttpInfo(Params1 params) throws ApiException {
-    Object localVarPostBody = params;
-    
-    // verify the required parameter 'params' is set
-    if (params == null) {
-      throw new ApiException(400, "Missing the required parameter 'params' when calling zipConverter");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/zipConverter";
-
-    // query params
-    java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
-    java.util.Map<String, String> localVarHeaderParams = new java.util.HashMap<String, String>();
-    java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
-
-
-    
-    
-    final String[] localVarAccepts = {
-      "application/zip", "application/json"
+      "application/zip", "application/pdf", "application/docx", "application/odt", "text/html", "text/plain", "application/octetstream", "application/json"
     };
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 

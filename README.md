@@ -2,7 +2,7 @@
 
 Doxey API
 - API version: 1.0.0
-  - Build date: 2019-11-14T10:53:54.676Z
+  - Build date: 2019-11-20T10:31:03.688Z
 
 Generate personalized documents using doxey template language
 
@@ -87,17 +87,17 @@ public class DefaultApiExample {
         
         DefaultApi apiInstance = new DefaultApi();
         String apiKey = "apiKey_example"; // String | API key
-        String fileId = "fileId_example"; // String | Id of the file to convert
+        String url = "url_example"; // String | URL of the source file
         String locale = "locale_example"; // String | The locale ('de', 'en' ...)
         String currency = "currency_example"; // String | The currency ('USD', 'EUR' ...)
         String timezone = "timezone_example"; // String | The timezone ('Europe/Berlin', 'GMT+06:00' ...)
         String format = "format_example"; // String | Target format
         Object model = null; // Object | Variable model
         try {
-            File result = apiInstance.converter(apiKey, fileId, locale, currency, timezone, format, model);
+            File result = apiInstance.convertGet(apiKey, url, locale, currency, timezone, format, model);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#converter");
+            System.err.println("Exception when calling DefaultApi#convertGet");
             e.printStackTrace();
         }
     }
@@ -111,16 +111,14 @@ All URIs are relative to *https://api.doxey.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**converter**](docs/DefaultApi.md#converter) | **POST** /converter | 
-*DefaultApi* | [**directConverter**](docs/DefaultApi.md#directConverter) | **POST** /directConverter | 
-*DefaultApi* | [**zipConverter**](docs/DefaultApi.md#zipConverter) | **POST** /zipConverter | 
+*DefaultApi* | [**convertGet**](docs/DefaultApi.md#convertGet) | **GET** /v1/convert | 
+*DefaultApi* | [**convertPost**](docs/DefaultApi.md#convertPost) | **POST** /v1/convert | 
 
 
 ## Documentation for Models
 
  - [Model](docs/Model.md)
  - [Params](docs/Params.md)
- - [Params1](docs/Params1.md)
 
 
 ## Documentation for Authorization

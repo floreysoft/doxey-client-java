@@ -16,7 +16,6 @@ package com.floreysoft.doxey.api;
 import com.floreysoft.doxey.invoke.ApiException;
 import java.io.File;
 import com.floreysoft.doxey.model.Params;
-import com.floreysoft.doxey.model.Params1;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -39,15 +38,15 @@ public class DefaultApiTest {
      *          if the Api call fails
      */
     @Test
-    public void converterTest() throws ApiException {
+    public void convertGetTest() throws ApiException {
         String apiKey = null;
-        String fileId = null;
+        String url = null;
         String locale = null;
         String currency = null;
         String timezone = null;
         String format = null;
         Object model = null;
-        File response = api.converter(apiKey, fileId, locale, currency, timezone, format, model);
+        File response = api.convertGet(apiKey, url, locale, currency, timezone, format, model);
 
         // TODO: test validations
     }
@@ -61,25 +60,9 @@ public class DefaultApiTest {
      *          if the Api call fails
      */
     @Test
-    public void directConverterTest() throws ApiException {
+    public void convertPostTest() throws ApiException {
         Params params = null;
-        File response = api.directConverter(params);
-
-        // TODO: test validations
-    }
-    
-    /**
-     * 
-     *
-     * Convert the template document into a multi documents based on the given number of models
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void zipConverterTest() throws ApiException {
-        Params1 params = null;
-        File response = api.zipConverter(params);
+        File response = api.convertPost(params);
 
         // TODO: test validations
     }

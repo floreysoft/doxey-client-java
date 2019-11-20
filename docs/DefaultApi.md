@@ -4,14 +4,13 @@ All URIs are relative to *https://api.doxey.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**converter**](DefaultApi.md#converter) | **POST** /converter | 
-[**directConverter**](DefaultApi.md#directConverter) | **POST** /directConverter | 
-[**zipConverter**](DefaultApi.md#zipConverter) | **POST** /zipConverter | 
+[**convertGet**](DefaultApi.md#convertGet) | **GET** /v1/convert | 
+[**convertPost**](DefaultApi.md#convertPost) | **POST** /v1/convert | 
 
 
-<a name="converter"></a>
-# **converter**
-> File converter(apiKey, url, locale, currency, timezone, format, model)
+<a name="convertGet"></a>
+# **convertGet**
+> File convertGet(apiKey, url, locale, currency, timezone, format, model)
 
 
 
@@ -33,10 +32,10 @@ String timezone = "timezone_example"; // String | The timezone ('Europe/Berlin',
 String format = "format_example"; // String | Target format
 Object model = null; // Object | Variable model
 try {
-    File result = apiInstance.converter(apiKey, url, locale, currency, timezone, format, model);
+    File result = apiInstance.convertGet(apiKey, url, locale, currency, timezone, format, model);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#converter");
+    System.err.println("Exception when calling DefaultApi#convertGet");
     e.printStackTrace();
 }
 ```
@@ -51,7 +50,7 @@ Name | Type | Description  | Notes
  **currency** | **String**| The currency (&#39;USD&#39;, &#39;EUR&#39; ...) |
  **timezone** | **String**| The timezone (&#39;Europe/Berlin&#39;, &#39;GMT+06:00&#39; ...) |
  **format** | **String**| Target format | [enum: pdf, txt, odt, html, docx]
- **model** | **Object**| Variable model |
+ **model** | [**Object**](.md)| Variable model |
 
 ### Return type
 
@@ -66,9 +65,9 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/octetstream, application/json
 
-<a name="directConverter"></a>
-# **directConverter**
-> File directConverter(params)
+<a name="convertPost"></a>
+# **convertPost**
+> File convertPost(params)
 
 
 
@@ -84,10 +83,10 @@ Convert the template document into a new document, given a Model
 DefaultApi apiInstance = new DefaultApi();
 Params params = new Params(); // Params | The conversion parameters
 try {
-    File result = apiInstance.directConverter(params);
+    File result = apiInstance.convertPost(params);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#directConverter");
+    System.err.println("Exception when calling DefaultApi#convertPost");
     e.printStackTrace();
 }
 ```
@@ -109,50 +108,5 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/octetstream, application/json
-
-<a name="zipConverter"></a>
-# **zipConverter**
-> File zipConverter(params)
-
-
-
-Convert the template document into a multi documents based on the given number of models
-
-### Example
-```java
-// Import classes:
-//import com.floreysoft.doxey.invoke.ApiException;
-//import com.floreysoft.doxey.api.DefaultApi;
-
-
-DefaultApi apiInstance = new DefaultApi();
-Params1 params = new Params1(); // Params1 | The conversion parameters
-try {
-    File result = apiInstance.zipConverter(params);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#zipConverter");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **params** | [**Params1**](Params1.md)| The conversion parameters |
-
-### Return type
-
-[**File**](File.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/zip, application/json
+ - **Accept**: application/zip, application/pdf, application/docx, application/odt, text/html, text/plain, application/octetstream, application/json
 

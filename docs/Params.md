@@ -5,7 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **apiKey** | **String** | API key | 
-**templatecontent** | **String** | Base64 encoded template file | 
+**templatecontent** | **String** | Base64 encoded template file |  [optional]
+**url** | **String** | URL of the template file |  [optional]
 **locale** | **String** | The locale (&#39;de&#39;, &#39;en&#39; ...) | 
 **currency** | **String** | The currency (&#39;USD&#39;, &#39;EUR&#39; ...) | 
 **timezone** | **String** | The timezone (&#39;Europe/Berlin&#39;, &#39;GMT+06:00&#39; ...) | 
@@ -22,6 +23,11 @@ TXT | &quot;txt&quot;
 ODT | &quot;odt&quot;
 HTML | &quot;html&quot;
 DOCX | &quot;docx&quot;
+PDFZIP | &quot;pdfzip&quot;
+TXTZIP | &quot;txtzip&quot;
+ODTZIP | &quot;odtzip&quot;
+HTMLZIP | &quot;htmlzip&quot;
+DOCXZIP | &quot;docxzip&quot;
 
 
 
