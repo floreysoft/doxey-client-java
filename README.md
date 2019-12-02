@@ -2,7 +2,7 @@
 
 Doxey API
 - API version: 1.0.0
-  - Build date: 2019-11-20T10:31:03.688Z
+  - Build date: 2019-12-02T12:33:06.315Z
 
 Generate personalized documents using doxey template language
 

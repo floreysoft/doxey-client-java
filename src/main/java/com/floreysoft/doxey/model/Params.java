@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Params
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-11-20T10:31:03.688Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-12-02T12:33:06.315Z")
 public class Params {
   @JsonProperty("apiKey")
   private String apiKey = null;
