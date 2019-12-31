@@ -19,7 +19,7 @@ import java.util.Arrays;
 /**
  * Model
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-12-02T12:33:06.315Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-12-31T12:13:16.559Z")
 public class Model {
 
   @Override

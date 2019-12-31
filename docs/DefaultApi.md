@@ -4,17 +4,17 @@ All URIs are relative to *https://api.doxey.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**convertGet**](DefaultApi.md#convertGet) | **GET** /v1/convert | 
-[**convertPost**](DefaultApi.md#convertPost) | **POST** /v1/convert | 
+[**mergeGet**](DefaultApi.md#mergeGet) | **GET** /v1/merge | 
+[**mergePost**](DefaultApi.md#mergePost) | **POST** /v1/merge | 
 
 
-<a name="convertGet"></a>
-# **convertGet**
-> File convertGet(apiKey, url, locale, currency, timezone, format, model)
+<a name="mergeGet"></a>
+# **mergeGet**
+> File mergeGet(apiKey, template, locale, currency, timezone, format, model)
 
 
 
-Convert the template document into a new document, given a Model
+Merge the template document into a new document, given a Model
 
 ### Example
 ```java
@@ -25,17 +25,17 @@ Convert the template document into a new document, given a Model
 
 DefaultApi apiInstance = new DefaultApi();
 String apiKey = "apiKey_example"; // String | API key
-String url = "url_example"; // String | URL of the source file
+String template = "template_example"; // String | URL (http or data) of the source file
 String locale = "locale_example"; // String | The locale ('de', 'en' ...)
 String currency = "currency_example"; // String | The currency ('USD', 'EUR' ...)
 String timezone = "timezone_example"; // String | The timezone ('Europe/Berlin', 'GMT+06:00' ...)
 String format = "format_example"; // String | Target format
 Object model = null; // Object | Variable model
 try {
-    File result = apiInstance.convertGet(apiKey, url, locale, currency, timezone, format, model);
+    File result = apiInstance.mergeGet(apiKey, template, locale, currency, timezone, format, model);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#convertGet");
+    System.err.println("Exception when calling DefaultApi#mergeGet");
     e.printStackTrace();
 }
 ```
@@ -45,7 +45,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **apiKey** | **String**| API key |
- **url** | **String**| URL of the source file |
+ **template** | **String**| URL (http or data) of the source file |
  **locale** | **String**| The locale (&#39;de&#39;, &#39;en&#39; ...) |
  **currency** | **String**| The currency (&#39;USD&#39;, &#39;EUR&#39; ...) |
  **timezone** | **String**| The timezone (&#39;Europe/Berlin&#39;, &#39;GMT+06:00&#39; ...) |
@@ -65,13 +65,13 @@ No authorization required
  - **Content-Type**: application/json
  - **Accept**: application/octetstream, application/json
 
-<a name="convertPost"></a>
-# **convertPost**
-> File convertPost(params)
+<a name="mergePost"></a>
+# **mergePost**
+> File mergePost(params)
 
 
 
-Convert the template document into a new document, given a Model
+Merge the template document into a new document, given a Model
 
 ### Example
 ```java
@@ -83,10 +83,10 @@ Convert the template document into a new document, given a Model
 DefaultApi apiInstance = new DefaultApi();
 Params params = new Params(); // Params | The conversion parameters
 try {
-    File result = apiInstance.convertPost(params);
+    File result = apiInstance.mergePost(params);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DefaultApi#convertPost");
+    System.err.println("Exception when calling DefaultApi#mergePost");
     e.printStackTrace();
 }
 ```

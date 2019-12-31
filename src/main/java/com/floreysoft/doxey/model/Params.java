@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Params
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-12-02T12:33:06.315Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-12-31T12:13:16.559Z")
 public class Params {
   @JsonProperty("apiKey")
   private String apiKey = null;
@@ -32,8 +32,8 @@ public class Params {
   @JsonProperty("templatecontent")
   private String templatecontent = null;
 
-  @JsonProperty("url")
-  private String url = null;
+  @JsonProperty("template")
+  private String template = null;
 
   @JsonProperty("locale")
   private String locale = null;
@@ -137,22 +137,22 @@ public class Params {
     this.templatecontent = templatecontent;
   }
 
-  public Params url(String url) {
-    this.url = url;
+  public Params template(String template) {
+    this.template = template;
     return this;
   }
 
    /**
-   * URL of the template file
-   * @return url
+   * URL (http or data) of the template file
+   * @return template
   **/
-  @ApiModelProperty(value = "URL of the template file")
-  public String getUrl() {
-    return url;
+  @ApiModelProperty(value = "URL (http or data) of the template file")
+  public String getTemplate() {
+    return template;
   }
 
-  public void setUrl(String url) {
-    this.url = url;
+  public void setTemplate(String template) {
+    this.template = template;
   }
 
   public Params locale(String locale) {
@@ -257,7 +257,7 @@ public class Params {
     Params params = (Params) o;
     return Objects.equals(this.apiKey, params.apiKey) &&
         Objects.equals(this.templatecontent, params.templatecontent) &&
-        Objects.equals(this.url, params.url) &&
+        Objects.equals(this.template, params.template) &&
         Objects.equals(this.locale, params.locale) &&
         Objects.equals(this.currency, params.currency) &&
         Objects.equals(this.timezone, params.timezone) &&
@@ -267,7 +267,7 @@ public class Params {
 
   @Override
   public int hashCode() {
-    return Objects.hash(apiKey, templatecontent, url, locale, currency, timezone, format, model);
+    return Objects.hash(apiKey, templatecontent, template, locale, currency, timezone, format, model);
   }
 
 
@@ -278,7 +278,7 @@ public class Params {
     
     sb.append("    apiKey: ").append(toIndentedString(apiKey)).append("\n");
     sb.append("    templatecontent: ").append(toIndentedString(templatecontent)).append("\n");
-    sb.append("    url: ").append(toIndentedString(url)).append("\n");
+    sb.append("    template: ").append(toIndentedString(template)).append("\n");
     sb.append("    locale: ").append(toIndentedString(locale)).append("\n");
     sb.append("    currency: ").append(toIndentedString(currency)).append("\n");
     sb.append("    timezone: ").append(toIndentedString(timezone)).append("\n");

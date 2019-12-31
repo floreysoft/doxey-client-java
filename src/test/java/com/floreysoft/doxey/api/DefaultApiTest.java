@@ -32,21 +32,21 @@ public class DefaultApiTest {
     /**
      * 
      *
-     * Convert the template document into a new document, given a Model
+     * Merge the template document into a new document, given a Model
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
-    public void convertGetTest() throws ApiException {
+    public void mergeGetTest() throws ApiException {
         String apiKey = null;
-        String url = null;
+        String template = null;
         String locale = null;
         String currency = null;
         String timezone = null;
         String format = null;
         Object model = null;
-        File response = api.convertGet(apiKey, url, locale, currency, timezone, format, model);
+        File response = api.mergeGet(apiKey, template, locale, currency, timezone, format, model);
 
         // TODO: test validations
     }
@@ -54,15 +54,15 @@ public class DefaultApiTest {
     /**
      * 
      *
-     * Convert the template document into a new document, given a Model
+     * Merge the template document into a new document, given a Model
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
-    public void convertPostTest() throws ApiException {
+    public void mergePostTest() throws ApiException {
         Params params = null;
-        File response = api.convertPost(params);
+        File response = api.mergePost(params);
 
         // TODO: test validations
     }

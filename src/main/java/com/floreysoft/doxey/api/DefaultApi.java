@@ -12,7 +12,7 @@ import java.io.File;
 import com.floreysoft.doxey.model.Params;
 
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-12-02T12:33:06.315Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-12-31T12:13:16.559Z")
 public class DefaultApi {
   private ApiClient apiClient;
 
@@ -34,9 +34,9 @@ public class DefaultApi {
 
   /**
    * 
-   * Convert the template document into a new document, given a Model
+   * Merge the template document into a new document, given a Model
    * @param apiKey API key (required)
-   * @param url URL of the source file (required)
+   * @param template URL (http or data) of the source file (required)
    * @param locale The locale (&#39;de&#39;, &#39;en&#39; ...) (required)
    * @param currency The currency (&#39;USD&#39;, &#39;EUR&#39; ...) (required)
    * @param timezone The timezone (&#39;Europe/Berlin&#39;, &#39;GMT+06:00&#39; ...) (required)
@@ -45,15 +45,15 @@ public class DefaultApi {
    * @return File
    * @throws ApiException if fails to make API call
    */
-  public File convertGet(String apiKey, String url, String locale, String currency, String timezone, String format, Object model) throws ApiException {
-    return convertGetWithHttpInfo(apiKey, url, locale, currency, timezone, format, model).getData();
+  public File mergeGet(String apiKey, String template, String locale, String currency, String timezone, String format, Object model) throws ApiException {
+    return mergeGetWithHttpInfo(apiKey, template, locale, currency, timezone, format, model).getData();
       }
 
   /**
    * 
-   * Convert the template document into a new document, given a Model
+   * Merge the template document into a new document, given a Model
    * @param apiKey API key (required)
-   * @param url URL of the source file (required)
+   * @param template URL (http or data) of the source file (required)
    * @param locale The locale (&#39;de&#39;, &#39;en&#39; ...) (required)
    * @param currency The currency (&#39;USD&#39;, &#39;EUR&#39; ...) (required)
    * @param timezone The timezone (&#39;Europe/Berlin&#39;, &#39;GMT+06:00&#39; ...) (required)
@@ -62,46 +62,46 @@ public class DefaultApi {
    * @return ApiResponse&lt;File&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<File> convertGetWithHttpInfo(String apiKey, String url, String locale, String currency, String timezone, String format, Object model) throws ApiException {
+  public ApiResponse<File> mergeGetWithHttpInfo(String apiKey, String template, String locale, String currency, String timezone, String format, Object model) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'apiKey' is set
     if (apiKey == null) {
-      throw new ApiException(400, "Missing the required parameter 'apiKey' when calling convertGet");
+      throw new ApiException(400, "Missing the required parameter 'apiKey' when calling mergeGet");
     }
     
-    // verify the required parameter 'url' is set
-    if (url == null) {
-      throw new ApiException(400, "Missing the required parameter 'url' when calling convertGet");
+    // verify the required parameter 'template' is set
+    if (template == null) {
+      throw new ApiException(400, "Missing the required parameter 'template' when calling mergeGet");
     }
     
     // verify the required parameter 'locale' is set
     if (locale == null) {
-      throw new ApiException(400, "Missing the required parameter 'locale' when calling convertGet");
+      throw new ApiException(400, "Missing the required parameter 'locale' when calling mergeGet");
     }
     
     // verify the required parameter 'currency' is set
     if (currency == null) {
-      throw new ApiException(400, "Missing the required parameter 'currency' when calling convertGet");
+      throw new ApiException(400, "Missing the required parameter 'currency' when calling mergeGet");
     }
     
     // verify the required parameter 'timezone' is set
     if (timezone == null) {
-      throw new ApiException(400, "Missing the required parameter 'timezone' when calling convertGet");
+      throw new ApiException(400, "Missing the required parameter 'timezone' when calling mergeGet");
     }
     
     // verify the required parameter 'format' is set
     if (format == null) {
-      throw new ApiException(400, "Missing the required parameter 'format' when calling convertGet");
+      throw new ApiException(400, "Missing the required parameter 'format' when calling mergeGet");
     }
     
     // verify the required parameter 'model' is set
     if (model == null) {
-      throw new ApiException(400, "Missing the required parameter 'model' when calling convertGet");
+      throw new ApiException(400, "Missing the required parameter 'model' when calling mergeGet");
     }
     
     // create path and map variables
-    String localVarPath = "/v1/convert";
+    String localVarPath = "/v1/merge";
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();
@@ -109,7 +109,7 @@ public class DefaultApi {
     java.util.Map<String, Object> localVarFormParams = new java.util.HashMap<String, Object>();
 
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "apiKey", apiKey));
-    localVarQueryParams.addAll(apiClient.parameterToPairs("", "url", url));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "template", template));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "locale", locale));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "currency", currency));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "timezone", timezone));
@@ -135,32 +135,32 @@ public class DefaultApi {
       }
   /**
    * 
-   * Convert the template document into a new document, given a Model
+   * Merge the template document into a new document, given a Model
    * @param params The conversion parameters (required)
    * @return File
    * @throws ApiException if fails to make API call
    */
-  public File convertPost(Params params) throws ApiException {
-    return convertPostWithHttpInfo(params).getData();
+  public File mergePost(Params params) throws ApiException {
+    return mergePostWithHttpInfo(params).getData();
       }
 
   /**
    * 
-   * Convert the template document into a new document, given a Model
+   * Merge the template document into a new document, given a Model
    * @param params The conversion parameters (required)
    * @return ApiResponse&lt;File&gt;
    * @throws ApiException if fails to make API call
    */
-  public ApiResponse<File> convertPostWithHttpInfo(Params params) throws ApiException {
+  public ApiResponse<File> mergePostWithHttpInfo(Params params) throws ApiException {
     Object localVarPostBody = params;
     
     // verify the required parameter 'params' is set
     if (params == null) {
-      throw new ApiException(400, "Missing the required parameter 'params' when calling convertPost");
+      throw new ApiException(400, "Missing the required parameter 'params' when calling mergePost");
     }
     
     // create path and map variables
-    String localVarPath = "/v1/convert";
+    String localVarPath = "/v1/merge";
 
     // query params
     java.util.List<Pair> localVarQueryParams = new java.util.ArrayList<Pair>();

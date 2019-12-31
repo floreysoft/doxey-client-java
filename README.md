@@ -2,7 +2,7 @@
 
 Doxey API
 - API version: 1.0.0
-  - Build date: 2019-12-02T12:33:06.315Z
+  - Build date: 2019-12-31T12:13:16.559Z
 
 Generate personalized documents using doxey template language
 
@@ -87,17 +87,17 @@ public class DefaultApiExample {
         
         DefaultApi apiInstance = new DefaultApi();
         String apiKey = "apiKey_example"; // String | API key
-        String url = "url_example"; // String | URL of the source file
+        String template = "template_example"; // String | URL (http or data) of the source file
         String locale = "locale_example"; // String | The locale ('de', 'en' ...)
         String currency = "currency_example"; // String | The currency ('USD', 'EUR' ...)
         String timezone = "timezone_example"; // String | The timezone ('Europe/Berlin', 'GMT+06:00' ...)
         String format = "format_example"; // String | Target format
         Object model = null; // Object | Variable model
         try {
-            File result = apiInstance.convertGet(apiKey, url, locale, currency, timezone, format, model);
+            File result = apiInstance.mergeGet(apiKey, template, locale, currency, timezone, format, model);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#convertGet");
+            System.err.println("Exception when calling DefaultApi#mergeGet");
             e.printStackTrace();
         }
     }
@@ -111,8 +111,8 @@ All URIs are relative to *https://api.doxey.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**convertGet**](docs/DefaultApi.md#convertGet) | **GET** /v1/convert | 
-*DefaultApi* | [**convertPost**](docs/DefaultApi.md#convertPost) | **POST** /v1/convert | 
+*DefaultApi* | [**mergeGet**](docs/DefaultApi.md#mergeGet) | **GET** /v1/merge | 
+*DefaultApi* | [**mergePost**](docs/DefaultApi.md#mergePost) | **POST** /v1/merge | 
 
 
 ## Documentation for Models
