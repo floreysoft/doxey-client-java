@@ -16,18 +16,18 @@
 
     <licenses>
         <license>
-            <name>Unlicense</name>
-            <url>https://doxey.io</url>
-            <distribution>repo</distribution>
+        <name>Apache License, Version 2.0</name>
+        <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        <distribution>repo</distribution>
         </license>
     </licenses>
 
     <developers>
         <developer>
-            <name>Swagger</name>
-            <email>apiteam@swagger.io</email>
-            <organization>Swagger</organization>
-            <organizationUrl>http://swagger.io</organizationUrl>
+            <name>floreysoft GmbH</name>
+            <email>info@floreysoft.net</email>
+            <organization>floreysoft GmbH</organization>
+            <organizationUrl>https://www.floreysoft.net</organizationUrl>
         </developer>
     </developers>
 
