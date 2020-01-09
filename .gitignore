@@ -19,3 +19,12 @@ hs_err_pid*
 target
 .gradle
 build
+/node_modules
+/settings.gradle
+/gradle
+/build.gradle
+/build.sbt
+/git_push.sh
+/gradle.properties
+/gradlew
+/gradlew.bat
